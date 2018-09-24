@@ -1,0 +1,20 @@
+.task {
+  display: block;
+  border: solid 1px #000;
+  width: auto;
+  background-color: #04f;
+  color: #0ff;
+  padding: 0.4%;
+}
+
+.task-name {
+  padding: 1%;
+}
+
+.task-btn {
+  background-color: #fff;
+}
+
+.task-btn:hover {
+  background-color: #0f0;
+}
