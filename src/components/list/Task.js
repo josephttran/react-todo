@@ -11,6 +11,10 @@ class Task extends Component {
         <button className="task-btn" onClick={() => this.props.handleClick(this.props.index)}>
           {this.props.todo.done ? 'Undo' : 'Complete'}
         </button> 
+        <button className="task-del-btn" onClick={() => this.props.handleClickDelete(this.props.index)}>
+          Delete
+        </button>       
+
       </div>
     )
   }

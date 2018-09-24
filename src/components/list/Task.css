@@ -18,3 +18,12 @@
 .task-btn:hover {
   background-color: #0f0;
 }
+
+.task-del-btn {
+  background-color: #fff;
+  margin-left: 5px;
+}
+
+.task-del-btn:hover {
+  background-color: #f00;
+}

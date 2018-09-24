@@ -11,6 +11,7 @@ class List extends Component {
               key={index}
               index={index}
               handleClick={this.props.handleClick}
+              handleClickDelete={this.props.handleClickDelete}
               todo={todo} 
             /> 
           )

@@ -29,6 +29,12 @@ class App extends Component {
     this.setState({ todos });
   }
 
+  handleClickDelete = (index) => {
+    const todos = [...this.state.todos];
+    todos.splice(index, 1);
+    this.setState({ todos });
+  }
+
   handleSubmit = (evt) => {
     evt.preventDefault();
 
@@ -51,6 +57,7 @@ class App extends Component {
           handleSubmit={this.handleSubmit}
         />
         <List 
+          handleClickDelete={this.handleClickDelete}
           handleClick={this.handleClick}
           todos={this.state.todos}
         />
