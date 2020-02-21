@@ -1,23 +1,37 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Task.css'
 
-class Task extends Component {
-  render() {
-    return (
-      <div className="task">
-        <span className="task-name" style={{ textDecoration: this.props.todo.done ? 'line-through' : 'none' }}>
-          {this.props.todo.value}
-        </span> 
-        <button className="task-btn" onClick={() => this.props.handleClick(this.props.index)}>
-          {this.props.todo.done ? 'Undo' : 'Complete'}
-        </button> 
-        <button className="task-del-btn" onClick={() => this.props.handleClickDelete(this.props.index)}>
-          Delete
-        </button>       
-
-      </div>
-    )
+function Task({todo, index, setTodos}) {
+  const handleClickComplete = (value) => {
+    setTodos(prevState => {
+      return prevState.map((todo, index) => {
+        if (index === value) {
+          todo.done = !todo.done
+        }
+        return todo;
+      });
+    });
   }
+
+  const handleClickDelete = (value) => {
+    setTodos(prevState => {
+      return prevState.filter((todo, index) => index !== value);
+    });
+  }
+
+  return (
+    <div className="task">
+      <span className="task-name" style={{ textDecoration: todo.done ? 'line-through' : 'none' }}>
+        {todo.value}
+      </span>
+      <button className="task-btn" onClick={() => handleClickComplete(index)}>
+        {todo.done ? 'Undo' : 'Complete'}
+      </button>
+      <button className="task-del-btn" onClick={() => handleClickDelete(index)}>
+        Delete
+      </button>
+    </div>
+  )
 }
 
 export default Task;

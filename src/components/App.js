@@ -1,69 +1,38 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-import Form from './form/Form';
+import AddTodoForm from './form/AddTodoForm';
 import List from './list/List';
 
-class App extends Component {
-  state = {
-    inputValue: "",
-    todos: [
-      {
-        value: 'Take out trash',
-        done: true
-      },
-      {
-        value: 'Cook dinner',
-        done: false
-      }
-    ]
-  }
-
-  handleChange = (evt) => {
-    this.setState({inputValue: evt.target.value})
-  }
-
-  handleClick = (index) => {
-    const todos = this.state.todos;
-    todos[index].done = !todos[index].done;
-    this.setState({ todos });
-  }
-
-  handleClickDelete = (index) => {
-    const todos = [...this.state.todos];
-    todos.splice(index, 1);
-    this.setState({ todos });
-  }
-
-  handleSubmit = (evt) => {
-    evt.preventDefault();
-
-    const newTodo = {
-      value: this.state.inputValue,
+function App() {
+  const [todos, setTodos] = useState([
+    {
+      value: 'Cook dinner',
+      done: false
+    },
+    {
+      value: 'Take out trash',
+      done: true
+    },
+    {
+      value: 'Read',
+      done: true
+    },
+    {
+      value: 'Eat',
       done: false
     }
-    const todos = this.state.todos;
-    todos.push(newTodo);
-    this.setState({todos: todos, inputValue: ""});
-  }
+  ]);
 
-  render() {
-    return (
-      <div className="App">
-        <h1>Todo List</h1>
-        <Form 
-          handleChange={this.handleChange} 
-          inputValue={this.state.inputValue}
-          handleSubmit={this.handleSubmit}
-        />
-        <List 
-          handleClickDelete={this.handleClickDelete}
-          handleClick={this.handleClick}
-          todos={this.state.todos}
-        />
+  return (
+    <div className="App">
+      <h1>Todo List App</h1>
+      <div className="todo-container">
+        <AddTodoForm setTodos={setTodos} />
+        <List todos={todos} setTodos={setTodos} />
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;

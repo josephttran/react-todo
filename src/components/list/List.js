@@ -1,24 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Task from './Task';
 
-class List extends Component {
-  render() {
-    return (
-      <div className="list">
-        {this.props.todos.map((todo, index) => {
-          return (
-            <Task 
-              key={index}
-              index={index}
-              handleClick={this.props.handleClick}
-              handleClickDelete={this.props.handleClickDelete}
-              todo={todo} 
-            /> 
-          )
-        })}
-      </div>
-    )
-  }
+function List({todos, setTodos}) {
+  return (
+    <div className="list">
+      {todos.map((todo, index) => {
+        return (
+          <Task
+            key={index}
+            index={index}
+            todo={todo}
+            setTodos={setTodos}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
 export default List;
