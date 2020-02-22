@@ -12,8 +12,12 @@ function deleteTodo(dispatch, index) {
   dispatch(actions.deleteTodo(index))
 }
 
+function replaceTodoList(dispatch, todosList) {
+  dispatch(actions.replaceTodoList(todosList));
+}
+
 function toggleTodoDone(dispatch, index) {
   dispatch(actions.toggleTodo(index));
 }
 
-export { addTodo, deleteTodo, toggleTodoDone };
+export { addTodo, deleteTodo, replaceTodoList, toggleTodoDone };

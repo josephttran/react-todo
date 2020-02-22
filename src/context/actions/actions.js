@@ -20,6 +20,13 @@ const deleteTodo = (index) => {
   }
 }
 
+const replaceTodoList = (todosList) => {
+  return {
+    type: actionTypes.REPLACE_TODOLIST,
+    payload: todosList
+  }
+}
+
 const toggleTodo = (index) => {
   return {
     type: actionTypes.TOGGLE_TODO,
@@ -27,4 +34,4 @@ const toggleTodo = (index) => {
   }
 }
 
-export { addTodo, deleteTodo, toggleTodo }
+export { addTodo, deleteTodo, replaceTodoList, toggleTodo }

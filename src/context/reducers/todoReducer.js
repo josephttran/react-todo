@@ -18,6 +18,11 @@ export function todoReducer(state, action) {
         ...state,
         todos: state.todos.filter((todo, index) => index !== payload)
       };
+    case actionTypes.REPLACE_TODOLIST:
+      return {
+        ...state,
+        todos: payload
+      }
     case actionTypes.TOGGLE_TODO:
       return  {
         ...state,
