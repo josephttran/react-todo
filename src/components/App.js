@@ -1,8 +1,9 @@
 import React from 'react';
 
-import './App.css';
 import AddTodoForm from './form/AddTodoForm';
 import List from './list/List';
+import ClearTodoList from './buttons/clearTodoList'
+import './App.css';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="todo-container">
         <AddTodoForm />
         <List />
+        <ClearTodoList />
       </div>
     </div>
   );
