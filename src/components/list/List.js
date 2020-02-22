@@ -1,16 +1,19 @@
-import React from 'react'
+import React from 'react';
+
+import { useTodoStateContext } from '../../context/todoContextProvider';
 import Task from './Task';
 
-function List({todos, setTodos}) {
+function List() {
+  const state = useTodoStateContext();
+
   return (
     <div className="list">
-      {todos.map((todo, index) => {
+      {state.todos.map((todo, index) => {
         return (
           <Task
             key={index}
             index={index}
             todo={todo}
-            setTodos={setTodos}
           />
         );
       })}

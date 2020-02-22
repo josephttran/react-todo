@@ -1,22 +1,18 @@
 import React from 'react'
+
+import { useTodoDispatchContext } from '../../context/todoContextProvider';
+import { deleteTodo, toggleTodoDone } from '../../context/todoOperations';
 import './Task.css'
 
-function Task({todo, index, setTodos}) {
+function Task({todo, index}) {
+  const dispatch = useTodoDispatchContext();
+
   const handleClickComplete = (value) => {
-    setTodos(prevState => {
-      return prevState.map((todo, index) => {
-        if (index === value) {
-          todo.done = !todo.done
-        }
-        return todo;
-      });
-    });
+    toggleTodoDone(dispatch, value);
   }
 
   const handleClickDelete = (value) => {
-    setTodos(prevState => {
-      return prevState.filter((todo, index) => index !== value);
-    });
+    deleteTodo(dispatch, value);
   }
 
   return (
@@ -27,7 +23,7 @@ function Task({todo, index, setTodos}) {
       <button className="task-btn" onClick={() => handleClickComplete(index)}>
         {todo.done ? 'Undo' : 'Complete'}
       </button>
-      <button className="task-del-btn" onClick={() => handleClickDelete(index)}>
+      <button className="task-del-btn" onClick={handleClickDelete.bind(this, index)}>
         Delete
       </button>
     </div>

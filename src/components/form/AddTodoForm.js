@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
-import './AddTodoForm.css'
+import React, { useState } from 'react';
 
-function AddTodoForm({setTodos}) {
+import { useTodoDispatchContext } from '../../context/todoContextProvider';
+import { addTodo } from '../../context/todoOperations';
+import './AddTodoForm.css';
+
+function AddTodoForm() {
   const [textInput, setTextInput] = useState("");
+  const dispatch = useTodoDispatchContext();
 
   const handleChange = (e) => {
     setTextInput(e.target.value);
@@ -10,27 +14,23 @@ function AddTodoForm({setTodos}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (textInput.length > 0) {
-      setTodos(prevState => [...prevState, {
-        value: textInput,
-        done: false
-      }]);
+      addTodo(dispatch, textInput);
       setTextInput("");
     }
   }
 
   return (
     <div className="add-to-form">
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form onSubmit={handleSubmit}>
         <label>
           Todo Input:
           <input 
-            onChange={(e) => handleChange(e)} 
+            onChange={handleChange} 
             value={textInput} 
           />
         </label>
-        <button type="submit">Add Todo</button>
+        <button>Add Todo</button>
       </form>
     </div>
   );
