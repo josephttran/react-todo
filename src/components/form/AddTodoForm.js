@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import { useTodoDispatchContext } from '../../context/todoContextProvider';
 import { addTodo } from '../../context/todoOperations';
-import './AddTodoForm.css';
 
 function AddTodoForm() {
   const [textInput, setTextInput] = useState("");

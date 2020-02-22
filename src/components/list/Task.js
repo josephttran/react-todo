@@ -2,7 +2,6 @@ import React from 'react'
 
 import { useTodoDispatchContext } from '../../context/todoContextProvider';
 import { deleteTodo, toggleTodoDone } from '../../context/todoOperations';
-import './Task.css'
 
 function Task({todo, index}) {
   const dispatch = useTodoDispatchContext();
