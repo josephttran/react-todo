@@ -20,18 +20,15 @@ function AddTodoForm() {
   }
 
   return (
-    <div className="add-to-form">
-      <form onSubmit={handleSubmit}>
-        <label>
-          Todo Input:
-          <input 
-            onChange={handleChange} 
-            value={textInput} 
-          />
-        </label>
-        <button>Add Todo</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className="flex flex-row leading-8">
+      <input className="flex-grow border border-blue-700 rounded-full focus:bg-blue-200"
+        onChange={handleChange} 
+        value={textInput} 
+      />
+      <button className="ml-4 w-1/4 bg-blue-600 text-white border rounded-full">
+        ADD
+      </button>
+    </form>
   );
 }
 

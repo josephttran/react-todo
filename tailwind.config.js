@@ -268,6 +268,13 @@ module.exports = {
       auto: 'auto',
       ...theme('spacing'),
       full: '100%',
+      'screen-1/2': '50vh',
+      'screen-1/4': '25vh',
+      'screen-3/4': '75vh',
+      'screen-1/5': '20vh',
+      'screen-2/5': '40vh',
+      'screen-3/5': '60vh',
+      'screen-4/5': '80vh',
       screen: '100vh',
     }),
     inset: {

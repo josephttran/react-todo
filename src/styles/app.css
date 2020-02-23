@@ -3934,6 +3934,34 @@ video {
   height: 100%;
 }
 
+.h-screen-1\/2 {
+  height: 50vh;
+}
+
+.h-screen-1\/4 {
+  height: 25vh;
+}
+
+.h-screen-3\/4 {
+  height: 75vh;
+}
+
+.h-screen-1\/5 {
+  height: 20vh;
+}
+
+.h-screen-2\/5 {
+  height: 40vh;
+}
+
+.h-screen-3\/5 {
+  height: 60vh;
+}
+
+.h-screen-4\/5 {
+  height: 80vh;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -16573,6 +16601,34 @@ video {
 
   .sm\:h-full {
     height: 100%;
+  }
+
+  .sm\:h-screen-1\/2 {
+    height: 50vh;
+  }
+
+  .sm\:h-screen-1\/4 {
+    height: 25vh;
+  }
+
+  .sm\:h-screen-3\/4 {
+    height: 75vh;
+  }
+
+  .sm\:h-screen-1\/5 {
+    height: 20vh;
+  }
+
+  .sm\:h-screen-2\/5 {
+    height: 40vh;
+  }
+
+  .sm\:h-screen-3\/5 {
+    height: 60vh;
+  }
+
+  .sm\:h-screen-4\/5 {
+    height: 80vh;
   }
 
   .sm\:h-screen {
@@ -29217,6 +29273,34 @@ video {
     height: 100%;
   }
 
+  .md\:h-screen-1\/2 {
+    height: 50vh;
+  }
+
+  .md\:h-screen-1\/4 {
+    height: 25vh;
+  }
+
+  .md\:h-screen-3\/4 {
+    height: 75vh;
+  }
+
+  .md\:h-screen-1\/5 {
+    height: 20vh;
+  }
+
+  .md\:h-screen-2\/5 {
+    height: 40vh;
+  }
+
+  .md\:h-screen-3\/5 {
+    height: 60vh;
+  }
+
+  .md\:h-screen-4\/5 {
+    height: 80vh;
+  }
+
   .md\:h-screen {
     height: 100vh;
   }
@@ -41859,6 +41943,34 @@ video {
     height: 100%;
   }
 
+  .lg\:h-screen-1\/2 {
+    height: 50vh;
+  }
+
+  .lg\:h-screen-1\/4 {
+    height: 25vh;
+  }
+
+  .lg\:h-screen-3\/4 {
+    height: 75vh;
+  }
+
+  .lg\:h-screen-1\/5 {
+    height: 20vh;
+  }
+
+  .lg\:h-screen-2\/5 {
+    height: 40vh;
+  }
+
+  .lg\:h-screen-3\/5 {
+    height: 60vh;
+  }
+
+  .lg\:h-screen-4\/5 {
+    height: 80vh;
+  }
+
   .lg\:h-screen {
     height: 100vh;
   }
@@ -54499,6 +54611,34 @@ video {
 
   .xl\:h-full {
     height: 100%;
+  }
+
+  .xl\:h-screen-1\/2 {
+    height: 50vh;
+  }
+
+  .xl\:h-screen-1\/4 {
+    height: 25vh;
+  }
+
+  .xl\:h-screen-3\/4 {
+    height: 75vh;
+  }
+
+  .xl\:h-screen-1\/5 {
+    height: 20vh;
+  }
+
+  .xl\:h-screen-2\/5 {
+    height: 40vh;
+  }
+
+  .xl\:h-screen-3\/5 {
+    height: 60vh;
+  }
+
+  .xl\:h-screen-4\/5 {
+    height: 80vh;
   }
 
   .xl\:h-screen {

@@ -13,17 +13,19 @@ function Task({todo, index}) {
   const handleClickDelete = (value) => {
     deleteTodo(dispatch, value);
   }
-
+ 
   return (
-    <div className="task">
-      <span className="task-name" style={{ textDecoration: todo.done ? 'line-through' : 'none' }}>
+    <div className="mb-2 p-2 bg-gray-300 flex flex-row items-center rounded-lg">
+      <input className="mx-2" 
+              type="checkbox" 
+              checked={todo.done} 
+              onChange={() => handleClickComplete(index)}/>
+      <span className={todo.done ? "flex-grow line-through" : "flex-grow"} >
         {todo.value}
       </span>
-      <button className="task-btn" onClick={() => handleClickComplete(index)}>
-        {todo.done ? 'Undo' : 'Complete'}
-      </button>
-      <button className="task-del-btn" onClick={handleClickDelete.bind(this, index)}>
-        Delete
+      <button className="mr-1 p-1 relative right-0 border border-blue-700 hover:bg-red-600 rounded-full"
+              onClick={handleClickDelete.bind(this, index)}>
+        DELETE
       </button>
     </div>
   )

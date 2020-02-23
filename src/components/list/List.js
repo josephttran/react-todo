@@ -23,22 +23,28 @@ function List() {
   }, [state.todos]);
 
   return (
-    <div className="list">
-      {todoList.length > 0
-        ?
-        todoList.map((todo, index) => {
-          return (
-            <Task
-              key={index}
-              index={index}
-              todo={todo}
-            />
-          );
-        })
-        :
-        <div>Todo Empty</div>
-    }
+    <div>
+      <div className="mb-4 font-semibold">
+        List of Tasks
+      </div>
+      <div className="pr-2 h-screen-3/5 flex flex-col flex-grow overflow-auto">
+        {todoList.length > 0
+          ?
+          todoList.map((todo, index) => {
+            return (
+              <Task
+                key={index}
+                index={index}
+                todo={todo}
+              />
+            );
+          })
+          :
+          <div>Todo Empty</div>
+      }
+      </div>      
     </div>
+
   );
 }
 
