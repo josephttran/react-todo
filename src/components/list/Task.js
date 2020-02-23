@@ -15,15 +15,16 @@ function Task({todo, index}) {
   }
  
   return (
-    <div className="mb-2 p-2 bg-gray-300 flex flex-row items-center rounded-lg">
-      <input className="mx-2" 
+    <div className="tw-mb-2 tw-p-2 tw-bg-gray-300 tw-flex tw-flex-row tw-items-center tw-rounded-lg">
+      <input className="tw-mx-2" 
               type="checkbox" 
               checked={todo.done} 
               onChange={() => handleClickComplete(index)}/>
-      <span className={todo.done ? "flex-grow line-through" : "flex-grow"} >
+      <span className={todo.done ? "tw-flex-grow tw-line-through" : "tw-flex-grow"} >
         {todo.value}
       </span>
-      <button className="mr-1 p-1 relative right-0 border border-blue-700 hover:bg-red-600 rounded-full"
+      <button className="tw-mr-1 tw-p-1 tw-relative tw-right-0 
+                        tw-border tw-border-blue-700 hover:tw-bg-red-600 tw-rounded-full"
               onClick={handleClickDelete.bind(this, index)}>
         DELETE
       </button>

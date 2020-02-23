@@ -11,7 +11,8 @@ function ClearTodoList() {
     replaceTodoList(dispatch, []);
   }
   return(
-    <button className="w-full p-1 bg-white hover:bg-red-600 border border-blue-700 rounded-full leading-8 font-semibold" 
+    <button className="tw-w-full tw-p-1 tw-leading-8 tw-font-semibold
+                      tw-bg-white hover:tw-bg-red-600 tw-border tw-border-blue-700 tw-rounded-full" 
             onClick={clearTodoList}>
       CLEAR LIST
     </button>

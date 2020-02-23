@@ -1,5 +1,5 @@
 module.exports = {
-  prefix: '',
+  prefix: 'tw-',
   important: false,
   separator: ':',
   theme: {

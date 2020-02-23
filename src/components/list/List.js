@@ -24,10 +24,10 @@ function List() {
 
   return (
     <div>
-      <div className="mb-4 font-semibold">
+      <div className="tw-mb-4 tw-font-semibold">
         List of Tasks
       </div>
-      <div className="pr-2 h-screen-3/5 flex flex-col flex-grow overflow-auto">
+      <div className="tw-pr-2 tw-h-screen-3/5 tw-flex tw-flex-col tw-flex-grow tw-overflow-auto">
         {todoList.length > 0
           ?
           todoList.map((todo, index) => {

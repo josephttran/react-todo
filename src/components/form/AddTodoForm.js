@@ -20,12 +20,12 @@ function AddTodoForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-row leading-8">
-      <input className="flex-grow border border-blue-700 rounded-full focus:bg-blue-200"
+    <form onSubmit={handleSubmit} className="tw-flex tw-flex-row tw-leading-8">
+      <input className="tw-flex-grow tw-border tw-border-blue-700 tw-rounded-full focus:tw-bg-blue-200"
         onChange={handleChange} 
         value={textInput} 
       />
-      <button className="ml-4 w-1/4 bg-blue-600 text-white border rounded-full">
+      <button className="tw-ml-4 tw-w-1/4 tw-bg-blue-600 tw-text-white tw-border tw-rounded-full">
         ADD
       </button>
     </form>
